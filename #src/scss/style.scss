@@ -1,0 +1,159 @@
+@font-face {
+	src: url(../fonts/FiraSans-Regular.woff);
+	font-family: 'Fira Sans';
+	font-display: swap;
+	font-weight: normal;
+	font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Fira Sans', serif;
+}
+
+picture {
+	display: block;
+	font-size: 0;
+}
+
+button {
+	outline: none;
+	border: none;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	user-select: none;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 16px;
+}
+
+.lock {
+	position: fixed;
+	overflow-y: scroll;
+}
+
+img {
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: cover;
+}
+
+.wrapper {
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	min-width: 320px;
+}
+
+.wrap {
+	min-width: 280px;
+	padding: 0 10px;
+}
+
+.link {
+	font-size: 32px;
+	padding: 12px 36px;
+	border-radius: 30px;
+}
+
+.btn {
+	font-size: 24px;
+	padding: 16px 48px;
+	border-radius: 30px;
+	background: #fff;
+	border: 2px solid #000;
+	color: #000;
+
+	@media (max-width:768px) {
+		font-size: 24px;
+	}
+
+	&:hover {
+		transition: all 0.3s ease 0s;
+		color: #FD3E1E;
+		border-color: #FD3E1E;
+	}
+}
+
+.h2 {
+	font-size: 64px;
+	line-height: 72px;
+	font-weight: bold;
+
+	padding-top: 64px;
+	padding-bottom: 20px;
+
+	@media (max-width:1440px) {
+		font-size: 54px;
+		line-height: 62px;
+		padding-top: 40px;
+	}
+
+	@media (max-width:1024px) {
+		font-size: 44px;
+		line-height: 52px;
+	}
+
+	@media (max-width:768px) {
+		font-size: 34px;
+		line-height: 42px;
+	}
+
+	@media (max-width:425px) {
+		font-size: 24px;
+		line-height: 32px;
+	}
+}
+
+.h3 {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: normal;
+}
+
+.desc {
+	font-size: 24px;
+	line-height: 32px;
+
+	&_pb40 {
+		padding-bottom: 40px;
+		// fantasy.net
+	}
+
+	@media (max-width:1024px) {
+		font-size: 20px;
+		line-height: 22px;
+	}
+}
+
+.notice {
+	font-size: 18px;
+	line-height: 22px;
+
+	&_red {
+		border-left: 5px solid #FD3E1E;
+		padding-left: 10px;
+	}
+}
+
+@import '_header';
+@import '_main';
+@import '_footer';
+@import '_form';

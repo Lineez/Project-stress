@@ -1,0 +1,265 @@
+<header class="header">
+	<div class="header__wrap">
+
+		<div class="header__menu">
+
+			<div class="header__logo">
+				<a href="/"><img height="64" width="64" src="./img/header/logo.png" alt="logo-butterfly"></a>
+			</div>
+			<!-- Иконка мобильного меню -->
+			<div class="header__burger">
+				<span></span>
+			</div>
+			<!-- Мобильная навигация -->
+			<nav class="header__mobile mobile">
+				<ul class="mobile__list">
+
+					<li class="header__item">
+						<a href="#" class="header__link">Принципы действия</a>
+					</li>
+
+					<li class="header__item">
+						<a href="#" class="header__link">Форматы</a>
+					</li>
+
+					<li class="header__item">
+						<a href="#" class="header__link">Частые вопросы</a>
+					</li>
+
+					<li class="header__item">
+						<!-- Не работает переход по ссылке -->
+						<a href="#" class="header__link">Отслеживание заказов</a>
+					</li>
+
+				</ul>
+			</nav>
+			<!-- Десктопная навигация -->
+			<nav class="header__nav">
+				<ul class="header__list">
+
+					<li class="header__item">
+						<a href="#" class="header__link">Принципы действия</a>
+					</li>
+
+					<li class="header__item">
+						<a href="#" class="header__link header__link_extra-margin">Форматы</a>
+					</li>
+
+					<li class="header__item">
+						<a href="#" class="header__link">Частые вопросы</a>
+					</li>
+
+				</ul>
+			</nav>
+
+			<div class="header__status">
+				<a href="#" class="header__link">Отслеживание заказов</a>
+			</div>
+		</div>
+
+		<div class="header__body">
+			<div class="header__wrap wrap">
+				<div class="header__h1">
+					Корректор<br>
+					эмоционального<br>
+					состояния<br>
+				</div>
+
+					<picture class="header__title-container">
+						<source  media="(max-width: 1024px)" srcset="./img/header/title-1024-min.png">
+						<source  media="(max-width: 768px)" srcset="./img/header/title-768-min.png">
+						<source  media="(max-width: 425px)" srcset="./img/header/title-425-min.png">
+						<img class="header__title" src="./img/header/title-min.png" alt="title">
+					</picture>
+					
+				<a href="#" class="header__link link link_white to-order">Заказать</a>
+
+				<img class="header__card" src="./img/header/card.png" alt="card" loading='lazy'>
+			</div>
+		</div>
+
+		<!-- Форма заказа -->
+		<div class="form-blur">
+			<div class="form-container">
+				<h2 class="form-container__h2">Оформление заказа</h2>
+
+				<span class="form-container__close">
+					<img src="img/form/x.png" alt="Крестик закрытия окна" class="form-container__x" loading='lazy'>
+				</span>
+
+				<form class="form header__form" action="#" method="POST">
+					<div class="form__wrap">
+
+
+						<!-- Первое окно формы -->
+						<section class="section form__section">
+
+							<div class="form__stage">
+								<img src="img/form/stage-mark.png" alt="Стадии" class="form__stage-image" loading='lazy'>
+								<span class="form__circle mlmr"></span>
+								<span class="form__circle"></span>
+							</div>
+
+							<div class="form__format">
+
+								<fieldset class="form__fieldset">
+									<legend class="form__legend mb12">Формат</legend>
+
+									<input checked id="card" class="form__input" type="radio" name="format" value="card">
+									<label class="form__card" for="card">
+
+										<img class="form__card-img" src="img/form/card2.png" alt="card" loading='lazy'>
+										<p class="form__card-name">Карточка<span><span class="form__card-price">1200</span><span
+													class="form__rub">&#8381;</span></span></p>
+									</label>
+
+									<input id="culon" class="form__input" type="radio" name="format" value="culon">
+									<label class="form__culon" for="culon">
+
+										<img class="form__culon-img" src="img/form/culon2.png" alt="culon" loading='lazy'>
+										<p class="form__culon-name">Кулон<span><span class="form__culon-price">850</span><span
+													class="form__rub">&#8381;</span></span>
+										</p>
+									</label>
+
+								</fieldset>
+							</div>
+
+							<div class="form__quantity">
+								<fieldset class="form__fieldset">
+									<legend class="form__legend">Количество</legend>
+
+									<div class="form__counter-container">
+										<div class="form__counter">0</div>
+										<input id="quantity" class="form__counter-input" type="hidden" value="">
+
+										<div class="form__signs-container">
+											<span class="form__plus"></span>
+											<span class="form__minus"></span>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+
+							<div class="form__sum">
+								<fieldset class="form__fieldset">
+									<legend class="form__legend">Итоговая сумма</legend>
+
+									
+									<div class="form__result">
+										<input id="sum" class="form__value-input" type="hidden" value="">
+										<span class="form__value">0</span>
+										<span class="form__rub form__rub_big">&#8381;</span>
+									</div>
+								</fieldset>
+							</div>
+
+							<div class="form__line"></div>
+							<a href="#" class="form__btn btn">Дальше</a>
+						</section>
+						<!-- Второе окно формы -->
+						<section class="section form__section">
+
+							<div class="form__stage">
+								<img src="img/form/stage-mark.png" alt="Стадии" class="form__stage-image" loading='lazy'>
+								<img src="img/form/stage-mark.png" alt="Стадии" class="form__stage-image mlmr mlmr_2" loading='lazy'>
+								<span class="form__circle"></span>
+							</div>
+
+							<fieldset class="form__fieldset">
+								<legend class="form__legend mb12">Имя</legend>
+								<input required name="userName" type="text" id="userName" class="form__user form__user_name" value="">
+							</fieldset>
+
+							<fieldset class="form__fieldset">
+								<legend class="form__legend mb12">Электронная почта</legend>
+								<input required name="userEmail" type="email" id="userEmail" class="form__user form__user_email" value="">
+							</fieldset>
+
+							<fieldset class="form__fieldset">
+								<legend class="form__legend mb12">Телефон</legend>
+								<input required name="userTel" type="tel" id="userTel" class="form__user form__user_tel" value="">
+							</fieldset>
+
+							<div class="form__line mt0"></div>
+							<div class="form__btn-container">
+								<a href="#" class="form__link">Назад</a>
+								<a href="#" class="form__btn btn form__btn-margin">Дальше</a>
+							</div>
+						</section>
+						<!-- Третье окно формы -->
+						<section class="section form__section">
+
+							<div class="form__stage">
+								<img src="img/form/stage-mark.png" loading='lazy' alt="Стадии" class="form__stage-image">
+								<img src="img/form/stage-mark.png" loading='lazy' alt="Стадии" class="form__stage-image mlmr mlmr_3">
+								<img src="img/form/stage-mark.png" loading='lazy' alt="Стадии" class="form__stage-image">
+							</div>
+
+							<fieldset class="form__fieldset">
+								<legend class="form__legend mb12">Адрес доставки</legend>
+								<select class="form__select" name="selectSity" id="selectSity">
+									<option value="Moscow">Москва</option>
+									<option value="Kiew">Киев</option>
+									<option value="Saint-Pitersburg">Спб</option>
+									<option value="Kirov">Киров</option>
+									<option value="Moscow">Москва</option>
+									<option value="Kiew">Киев</option>
+									<option value="Saint-Pitersburg">Спб</option>
+									<option value="Kirov">Киров</option>
+									<option value="Moscow">Москва</option>
+									<option value="Kiew">Киев</option>
+									<option value="Saint-Pitersburg">Спб</option>
+									<option value="Kirov">Киров</option>
+									<option value="Moscow">Москва</option>
+									<option value="Kiew">Киев</option>
+									<option value="Saint-Pitersburg">Спб</option>
+									<option value="Kirov">Киров</option>
+									<option value="Moscow">Москва</option>
+									<option value="Kiew">Киев</option>
+									<option value="Saint-Pitersburg">Спб</option>
+									<option value="Kirov">Киров</option>
+									<option value="Moscow">Москва</option>
+									<option value="Kiew">Киев</option>
+									<option value="Saint-Pitersburg">Спб</option>
+									<option value="Kirov">Киров</option>
+									<option value="Moscow">Москва</option>
+									<option value="Kiew">Киев</option>
+									<option value="Saint-Pitersburg">Спб</option>
+									<option value="Kirov">Киров</option>
+									<option value="Moscow">Москва</option>
+									<option value="Kiew">Киев</option>
+									<option value="Saint-Pitersburg">Спб</option>
+									<option value="Kirov">Киров</option>
+									<option value="Moscow">Москва</option>
+									<option value="Kiew">Киев</option>
+									<option value="Saint-Pitersburg">Спб</option>
+									<option value="Kirov">Киров</option>
+								</select>
+							</fieldset>
+
+							<fieldset class="form__fieldset mt32">
+								<legend class="form__legend mb12">Адрес доставки</legend>
+								<div class="form__maps">
+									<!-- Какая-то карта -->
+									<iframe
+										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d575865.2020802194!2d37.31676028622712!3d55.68075612023892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1605973009859!5m2!1sru!2sru"
+										width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
+										aria-hidden="false" tabindex="0" onload="true"></iframe>
+								</div>
+							</fieldset>
+
+							<div class="form__line mt46"></div>
+							<div class="form__btn-container">
+								<a href="#" class="form__link">Назад</a>
+								<button class="form__submit form__btn-margin" type="submit">Готово</button>
+							</div>
+						</section>
+					</div>
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+</header>
