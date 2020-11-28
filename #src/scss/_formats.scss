@@ -1,0 +1,145 @@
+.main {
+
+	&__formats {
+		padding-top: 44px;
+		padding-bottom: 52px;
+		@media (max-width:768px) {
+			padding-top: 24px;
+			padding-bottom: 32px;
+		}
+	}
+}
+
+.formats {
+	background-color: #E8EBF2;
+	&__h2 {
+		text-align: center;
+		padding-bottom: 16px;
+	}
+
+	&__wrap {
+		max-width: 1090px;
+		margin: 0 auto;
+	}
+
+	&__row {
+		display: flex;
+		margin: 0 -64px;
+
+		@media (max-width:1440px) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin: 0;
+		}
+	}
+	
+	&__column {
+		flex: 0 1 50%;
+		padding: 0 64px;
+		display: flex;
+		padding-bottom: 52px;
+		@media (max-width:768px) {
+			margin: 0 10px;
+			padding-left: 34px;
+			padding-right: 34px;
+			padding-bottom: 32px;
+		}
+		@media (max-width:550px) {
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 15px;
+		}
+
+		&:hover{
+			transition: all 0.8s ease 0s;
+			border-radius: 5px;
+			box-shadow: 0 8px 24px rgba($color: #224DC1, $alpha: 0.16);
+			background-color: #fff;
+		}
+	}
+	
+	&__item {
+		display: flex;
+		flex-direction: column;
+		max-width: 440px;
+		@media (max-width:768px) {
+			max-width: 380px;
+		}
+		@media (max-width:550px) {
+			max-width: 320px;
+		}
+	}
+	
+	&__img {
+		height: 360px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width:1440px) {
+			height: 300px;
+		}
+		@media (max-width:550px) {
+			height: 260px;
+		}
+	}
+	
+	&__body {
+		flex: 1 1 auto;
+	}
+	
+	&__h3 {
+		text-align: center;
+		font-size: 32px;
+		line-height: 34px;
+		font-weight: bold;
+	}
+	
+	&__text {
+		text-align: left;
+		font-size: 24px;
+		line-height: 28px;
+		padding-top: 16px;
+		padding-bottom: 32px;
+		@media (max-width:1440px) {
+			text-align: center;
+		}
+	}
+	
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width:375px) {
+			flex-direction: column;
+		}
+	}
+	
+	&__price {
+		font-size: 64px;
+		font-weight: bold;
+		line-height: 34px;
+		@media (max-width:550px) {
+			font-size: 44px;
+		}
+		@media (max-width:375px) {
+			padding-bottom: 15px;
+		}
+		span {
+			font-size: 0.5em;
+			padding-left: 10px;
+		}
+	}
+	
+	&__link {
+		@extend .btn;
+		background-color: transparent;
+		@media (max-width:550px) {
+			padding: 12px 32px;
+		}
+	}
+
+}
+
+
+

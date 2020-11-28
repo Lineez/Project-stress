@@ -1,0 +1,33 @@
+.main {
+	&__action {
+		margin-bottom: 64px;
+
+		@media (max-width:1440px) {
+			max-width: 854px;
+			margin: 0 auto;
+			margin-bottom: 44px;
+		}
+	}
+}
+
+.action {
+	&__notice {
+		font-size: 32px;
+		line-height: 34px;
+		margin-top: 28px;
+		// mt48-20
+		margin-bottom: 48px;
+
+		@media (max-width:1440px) {
+			font-size: 28px;
+			line-height: 28px;
+		}
+
+		@media (max-width:1024px) {
+			font-size: 20px;
+			line-height: 20px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+}

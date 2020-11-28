@@ -1,0 +1,42 @@
+.faq {
+	padding-bottom: 60px;
+	@media (max-width:1440px) {
+		padding-bottom: 40px;
+	}
+	@media (max-width:768px) {
+		padding-bottom: 20px;
+	}
+
+	&__h2 {
+	}
+
+	&__tab {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: start;
+		@media (max-width:1440px) {
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__btn {
+		@extend .tab__btn;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	&__body {
+		@extend .tab__body;
+		padding-top: 0;
+		transition: all 1s ease 0s;
+		.active {
+			display: block;
+		}
+	}
+
+	&__desc {
+		padding-bottom: 20px;
+	}
+}

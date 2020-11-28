@@ -1,7 +1,6 @@
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	position: relative;
 }
 .header {
@@ -23,6 +22,7 @@
 }
 
 .content {
+	flex: 1 1 auto;
 	overflow: auto;
 	&__wrap {
 		max-width: 1300px;
