@@ -29,20 +29,16 @@
 	position: relative;
 	margin: 0 auto;
 
-	@media (max-width:1024px) {
-		max-width: 520px;
+	@media (max-width:767px) {
+		max-width: 500px;
 	}
 
-	@media (max-width:768px) {
-		max-width: 340px;
+	@media (max-width:550px) {
+		max-width: 380px;
 	}
 
 	@media (max-width:425px) {
 		max-width: 280px;
-	}
-
-	@media (max-width:375px) {
-		max-width: 250px;
 	}
 
 	&__h2 {
@@ -82,40 +78,28 @@
 		width: 34px;
 		height: 34px;
 		right: -54px;
-
-		@media (max-width:768px) {
-			width: 24px;
-			height: 24px;
-			right: -40px;
+		@media (max-width:1024px) {
+			background-color: #224DC1;
+			right: -17px;
+			transform: translateY(-50%);
+			border: 3px solid #224DC1;
+			border-radius: 50%;
+			overflow: hidden;
 		}
-
-		@media (max-width:425px) {
-			width: 20px;
-			height: 20px;
-			right: -30px;
-		}
+		img {}
 	}
 }
 
 .form {
 	&__wrap {
 		max-width: 440px;
-		height: 660px;
 		margin: 0 auto;
 		padding-bottom: 40px;
-		@media (max-width:1024px) {
-			height: auto;
-		}
 	}
 
 	&__section {
 		display: none;
 		text-align: center;
-		@media (max-width:1024px) {
-			margin-right: auto;
-			margin-left: auto;
-			max-width: 90%;
-		}
 
 		&.active {
 			display: block;
@@ -211,10 +195,8 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-
-		@media (max-width:1024px) {
+		@media (max-width:767px) {
 			flex-direction: column;
-			justify-content: center;
 		}
 	}
 	&__fieldset.mt32 {
@@ -225,8 +207,7 @@
 		text-align: left;
 		font-size: 24px;
 		line-height: 32px;
-
-		@media (max-width:1024px) {
+		@media (max-width:767px) {
 			text-align: center;
 		}
 	}
@@ -264,6 +245,10 @@
 		display: flex;
 		align-items: center;
 		user-select: none;
+		@media (max-width:767px) {
+			margin-bottom: 30px;
+			border-radius: 5px;
+		}
 
 		&:hover {
 			cursor: pointer;
@@ -272,12 +257,6 @@
 			transition: all 0.3s ease 0s;
 			box-shadow: 4px 0 8px #224DC1;
 			z-index: 2;
-		}
-	
-		
-		@media (max-width:1024px) {
-			margin-bottom: 30px;
-			border-radius: 5px;
 		}
 	}
 	
@@ -290,6 +269,9 @@
 		display: flex;
 		align-items: center;
 		user-select: none;
+		@media (max-width:767px) {
+			border-radius: 5px;
+		}
 
 		&:hover {
 			cursor: pointer;
@@ -298,10 +280,6 @@
 			transition: all 0.3s ease 0s;
 			box-shadow: 4px 0 8px #224DC1;
 			// z-index: 2;
-		}
-
-		@media (max-width:1024px) {
-			border-radius: 5px;
 		}
 	}
 
