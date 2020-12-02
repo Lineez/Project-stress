@@ -774,6 +774,11 @@ img {
   background-color: #E8EBF2;
 }
 
+.form__maps iframe {
+  width: 100%;
+  height: 100%;
+}
+
 .main__wrap {
   padding: 0 15px;
   max-width: 1300px;
