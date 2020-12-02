@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   src: url(../fonts/FiraSans-Regular.woff);
   font-family: 'FiraSans';
@@ -917,7 +919,7 @@ img {
 }
 
 .formats__wrap {
-  max-width: 1090px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -925,17 +927,20 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 -64px;
 }
 
 .formats__column {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
-  padding: 0 64px;
+  padding: 0 105px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 60px;
   padding-bottom: 52px;
 }
 
@@ -949,6 +954,14 @@ img {
   background-color: #fff;
 }
 
+.formats__column:hover .formats__link {
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  color: #FD3E1E;
+  border-color: #FD3E1E;
+}
+
 .formats__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -960,8 +973,24 @@ img {
   max-width: 440px;
 }
 
+.formats__img-container {
+  height: 308px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .formats__img {
-  height: 360px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -971,6 +1000,66 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+.formats .line-top {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #707070;
+  opacity: 0.2;
+  top: -26px;
+}
+
+.formats .line-top::before {
+  content: '85 мм';
+  position: absolute;
+  right: 50%;
+  top: -26px;
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.formats .line-right {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #707070;
+  opacity: 0.2;
+  right: -26px;
+}
+
+.formats .line-right::before {
+  content: '54 мм';
+  position: absolute;
+  word-wrap: none;
+  right: -56px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.formats .line-left {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #707070;
+  opacity: 0.2;
+  left: -24px;
+}
+
+.formats .line-left::before {
+  content: '27 мм';
+  position: absolute;
+  word-wrap: none;
+  left: -54px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .formats__body {
@@ -1214,10 +1303,6 @@ img {
     margin: 0;
   }
 
-  .formats__img {
-    height: 300px;
-  }
-
   .formats__text {
     text-align: center;
   }
@@ -1435,17 +1520,6 @@ img {
     padding-bottom: 32px;
   }
 
-  .formats__column {
-    margin: 0 10px;
-    padding-left: 34px;
-    padding-right: 34px;
-    padding-bottom: 32px;
-  }
-
-  .formats__item {
-    max-width: 380px;
-  }
-
   .faq {
     padding-bottom: 20px;
   }
@@ -1484,6 +1558,22 @@ img {
   .form__culon {
     border-radius: 5px;
   }
+
+  .formats__column {
+    margin: 0 10px;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-bottom: 32px;
+    padding-top: 0;
+  }
+
+  .formats__item {
+    max-width: 380px;
+  }
+
+  .formats .line {
+    display: none;
+  }
 }
 
 @media (max-width: 550px) {
@@ -1491,18 +1581,8 @@ img {
     max-width: 380px;
   }
 
-  .formats__column {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 15px;
-  }
-
   .formats__item {
     max-width: 320px;
-  }
-
-  .formats__img {
-    height: 260px;
   }
 
   .formats__price {
@@ -1541,6 +1621,16 @@ img {
   .stress__h2 {
     padding-top: 55px;
     padding-bottom: 15px;
+  }
+
+  .formats__column {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+  }
+
+  .formats__img-container {
+    height: 250px;
   }
 }
 
