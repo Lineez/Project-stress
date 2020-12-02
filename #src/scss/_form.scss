@@ -193,7 +193,6 @@
 	&__fieldset {
 		border: none;
 		display: flex;
-		flex-direction: row;
 		align-items: center;
 		@media (max-width:767px) {
 			flex-direction: column;
@@ -325,7 +324,7 @@
 
 	&__counter-container {
 		display: flex;
-		justify-content: center;
+		// justify-content: center;
 		align-items: center;
 	}
 
@@ -471,7 +470,7 @@
 	}
 
 	&__link {
-		@extend .header__link;
+		border-bottom: 1px dashed #224DC1;
 		color: #224DC1;
 		border-color: #224DC1;
 		font-size: 24px;

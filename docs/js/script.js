@@ -1,13 +1,13 @@
 'use strict'
 // ###################### menu burger
 
-let headerBurger = document.querySelector('.header__burger');
-let headerMobile = document.querySelector('.header__mobile');
+let menuBurger = document.querySelector('.menu__burger');
+let menuMobile = document.querySelector('.menu__mobile');
 let body = document.querySelector('body');
 
-headerBurger.onclick = function () {
-	headerBurger.classList.toggle('active');
-	headerMobile.classList.toggle('active');
+menuBurger.onclick = function () {
+	menuBurger.classList.toggle('active');
+	menuMobile.classList.toggle('active');
 	// убираем прокрутку body при открытом меню
 	body.classList.toggle("lock");
 }
@@ -191,3 +191,36 @@ formMinus.addEventListener('click', function () {
 		}
 	}
 })
+
+
+// Плавный переход по якорям (работает)
+
+let anchors = document.querySelectorAll('.scroll-to');
+ //выбираем все ссылки к якорю на странице
+let V = 0.08;
+// скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+
+for (let anchor of anchors) {
+	anchor.addEventListener('click', function (e) { //по клику на ссылку
+
+		e.preventDefault()//отменяем стандартное поведение
+		const blockID = anchor.getAttribute('href');
+		
+		let w = window.pageYOffset, // производим прокрутка прокрутка
+			hash = this.href.replace(/[^#]*(.*)/, blockID); // к id элемента, к которому нужно перейти
+		let t = document.querySelector(hash).getBoundingClientRect().top, // отступ от окна браузера до id
+			start = null;
+		requestAnimationFrame(step); // подробнее про функцию анимации [developer.mozilla.org]
+		function step(time) {
+			if (start === null) start = time;
+			let progress = time - start,
+				r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
+			window.scrollTo(0, r);
+			if (r != w + t) {
+				requestAnimationFrame(step)
+			} else {
+				location.hash = hash // URL с хэшем
+			}
+		}
+	}, false);
+}
