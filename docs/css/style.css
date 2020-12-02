@@ -1021,7 +1021,6 @@ img {
 .formats .line-right::before {
   content: '54 мм';
   position: absolute;
-  word-wrap: none;
   right: -56px;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -1041,7 +1040,6 @@ img {
 .formats .line-left::before {
   content: '27 мм';
   position: absolute;
-  word-wrap: none;
   left: -54px;
   top: 50%;
   -webkit-transform: translateY(-50%);

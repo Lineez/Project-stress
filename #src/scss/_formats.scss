@@ -139,7 +139,6 @@
 		&::before {
 			content: '54 мм';
 			position: absolute;
-			word-wrap: none;
 			right: -56px;
 			top: 50%;
 			transform: translateY(-50%)
@@ -157,7 +156,6 @@
 		&::before {
 			content: '27 мм';
 			position: absolute;
-			word-wrap: none;
 			left: -54px;
 			top: 50%;
 			transform: translateY(-50%)
