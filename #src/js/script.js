@@ -196,16 +196,23 @@ formMinus.addEventListener('click', function () {
 // Плавный переход по якорям (работает)
 
 let anchors = document.querySelectorAll('.scroll-to');
- //выбираем все ссылки к якорю на странице
+//выбираем все ссылки к якорю на странице
 let V = 0.08;
 // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
 
 for (let anchor of anchors) {
+	
 	anchor.addEventListener('click', function (e) { //по клику на ссылку
+		// Проверка мобильного меню
+		if (menuBurger.classList.contains('active') && menuMobile.classList.contains('active')) {
+				menuBurger.classList.remove('active');
+				menuMobile.classList.remove('active');
+				body.classList.remove("lock");
+		}
 
-		e.preventDefault()//отменяем стандартное поведение
+		e.preventDefault() //отменяем стандартное поведение
 		const blockID = anchor.getAttribute('href');
-		
+
 		let w = window.pageYOffset, // производим прокрутка прокрутка
 			hash = this.href.replace(/[^#]*(.*)/, blockID); // к id элемента, к которому нужно перейти
 		let t = document.querySelector(hash).getBoundingClientRect().top, // отступ от окна браузера до id
